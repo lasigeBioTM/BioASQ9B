@@ -62,7 +62,7 @@ def main():
 	                            'label': bio_factoid_answers})
 	val_df = pd.merge(snippets_df,questions_df, how = 'left', on = 'id')
 
-	val_df = val_df.sample(16)
+	#val_df = val_df.sample(16)
 
 
 	def get_start_answer(row):

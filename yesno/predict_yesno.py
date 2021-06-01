@@ -38,7 +38,7 @@ def main():
 
 	from transformers import BertForSequenceClassification
 
-	model = BertForSequenceClassification.from_pretrained(args['model_name'], num_labels = 3)
+	model = BertForSequenceClassification.from_pretrained(args['model_name'], num_labels = 4)
 
 	from torch import nn
 	class BERT_Arch(nn.Module):
@@ -56,11 +56,11 @@ def main():
 	        self.relu =  nn.ReLU()
 	        # dense layer 1
 	        if args['mid_layer']:
-	        	self.fc1 = nn.Linear(3,args['mid_layer_size'])
+	        	self.fc1 = nn.Linear(4,args['mid_layer_size'])
 
 	        	self.fc2 = nn.Linear(args['mid_layer_size'],2)
 	        else:
-	        	self.fc1 = nn.Linear(3,2)
+	        	self.fc1 = nn.Linear(4,2)
 
 	        #softmax activation function
 	        self.softmax = nn.LogSoftmax(dim=1)

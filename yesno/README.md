@@ -15,7 +15,7 @@ python3 tune_yesno.py \
 ```python
 python3 predict_yesno.py \
 --model_name='dmis-lab/biobert-base-cased-v1.1' \
---checkpoint_input_path='../checkpoint/checkpoint_yn_direct.pt' \
+--checkpoint_input_path='../checkpoint/checkpoint_bio_yn_256.pt' \
 --predictions_output_path='./predictions/pred_test.csv' \
 --questions_path='../data/8B_golden/8B1_golden.json' \
 --no-mid_layer

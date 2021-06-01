@@ -15,11 +15,11 @@ def main():
 	parser = argparse.ArgumentParser()
 
 	# Add the arguments to the parser
-	parser.add_argument("--model_name", required= True)
+	parser.add_argument("--model_name", required= True, default = 'dmis-lab/biobert-base-cased-v1.1')
 	parser.add_argument("--checkpoint_input_path", required= False)
 	parser.add_argument("--predictions_output_path", required= True)
 	parser.add_argument("--questions_path", required= True)
-	parser.add_argument("--k_candidates", required= True, type = int)
+	parser.add_argument("--k_candidates", required= True, type = int, default = 5)
 
 	args = vars(parser.parse_args())
 	device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')

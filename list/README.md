@@ -22,7 +22,7 @@ python3 tune_list.py \
 ```python
 python3 predict_list.py \
 --model_name='dmis-lab/biobert-base-cased-v1.1' \
---checkpoint_input_path='../checkpoint/checkpoint_list.pt' \
+--checkpoint_input_path='../checkpoint/checkpoint_list_bio9.pt' \
 --predictions_output_path='./predictions/pred.csv' \
 --questions_path='../data/8B_golden/8B1_golden.json' \
 --k_candidates=5 \

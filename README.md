@@ -1,6 +1,8 @@
 # BioASQ 9B LASIGE_ULISBOA
 
+All code developed in  Python 3.6.0
 
+Required packages in `requirements.txt`
 
 
 
